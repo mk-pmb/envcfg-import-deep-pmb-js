@@ -37,6 +37,11 @@ Magic
 aka "trying to be smart":
 
 * If the original value was a number, parse the env string as a number.
+* If the original value was a boolean, interpret some magic strings like
+  `'on'`/`'off'`,
+  `'yes'`/`'no'`,
+  `'true'`/`'false'`,
+  `'+'`/`'-'`  or `'0'`/`'1'`.
 * If the env value starts with `'%'`, strip that and URL-decode the remainder.
 
 
