@@ -34,7 +34,7 @@ const baconOnionEnv = {
   pizza_toppings_bacon: '3',
   pizza_toppings_mozzarella: '0',
   pizza_toppings_onion: '2',
-  pizza_toppings_unsupported: '9001',
+  pizza_toppings_unsupported_key: 'see issue #1',
 };
 const combined = envcfgImportDeep(margherita,
   { env: baconOnionEnv, prefix: 'pizza_' });
