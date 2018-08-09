@@ -101,11 +101,6 @@ assert.deepEqual(combined, {
   },
 });
 ```
-    onion: 2,
-    tomato_sauce: 1,
-  },
-});
-```
 <!--/include-->
 
 

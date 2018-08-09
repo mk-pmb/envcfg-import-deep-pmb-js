@@ -1,5 +1,5 @@
 { "name": "envcfg-import-deep-pmb",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Overwrite parts of your config object with env vars, trying to be smart.",
   "keywords": [],
 
