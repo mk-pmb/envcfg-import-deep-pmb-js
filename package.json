@@ -1,0 +1,31 @@
+{ "name": "envcfg-import-deep-pmb",
+  "version": "1.0.0",
+  "description": "Overwrite parts of your config object with env vars, trying to be smart.",
+  "keywords": [],
+
+  "author": "M.K. (https://github.com/mk-pmb)",
+  "homepage": "https://github.com/mk-pmb/envcfg-import-deep-pmb-js/#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-pmb/envcfg-import-deep-pmb-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mk-pmb/envcfg-import-deep-pmb-js/issues"
+  },
+  "contributors": [],
+
+  "private": false, "license": "ISC",
+
+  "main": "ec.js",
+  "scripts": { "test": "nodejs test/all.node.js" },
+  "directories": { "test": "test" },
+
+  "dependencies": {},
+  "devDependencies": {
+    "esmod-pmb": "^0.1.5",
+    "usnam-pmb": "^0.2.3"
+  },
+
+
+  "npm vs. BOM = Unexpected token": "-*- coding: UTF-8 -*-"
+}
