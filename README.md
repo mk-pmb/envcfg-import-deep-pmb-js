@@ -24,10 +24,11 @@ while still not modifying original objects.
 
 `opts` is an optional options object that supports these keys:
 
-* `inplace`: If set to `true`, don't copy anything, just modify it inplace.
+* `env`: Which dictionary to use as environment. Default: `process.env`
 * `prefix`: Prefix for env vars. Default: empty string
 * `sep`: What string to append to the `prefix` in addition to the
   property name when diving. Default: `'_'`
+* `inplace`: If set to `true`, don't copy anything, just modify it inplace.
 
 
 
