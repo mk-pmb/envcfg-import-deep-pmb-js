@@ -6,7 +6,11 @@ function envcfgImportDeep(cfg, opt) {
   if (!opt) { opt = false; }
   if (!cfg) { return cfg; }
   var copy = (opt.inplace !== true), sep = (opt.sep || '_'),
-    env = (opt.env || process.env);
+    env = (opt.env || process.env), envPrefix = opt.prefix;
+  if (opt.ifPrefixProp) {
+    envPrefix = cfg[opt.ifPrefixProp];
+    if (!envPrefix) { return cfg; }
+  }
   function scan(obj, pfx) {
     var modified = (copy ? null : obj);
     Object.keys(obj).forEach(function (key) {
@@ -49,7 +53,7 @@ function envcfgImportDeep(cfg, opt) {
     });
     return (modified || obj);
   }
-  return scan(cfg, (opt.prefix || ''));
+  return scan(cfg, (envPrefix || ''));
 }
 
 module.exports = envcfgImportDeep;

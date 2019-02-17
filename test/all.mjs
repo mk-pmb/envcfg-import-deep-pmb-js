@@ -1,1 +1,2 @@
-import './usage.mjs';
+import './usage';
+import './ifPrefixProp';

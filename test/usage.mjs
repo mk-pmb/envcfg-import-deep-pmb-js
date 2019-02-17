@@ -2,7 +2,7 @@
 import assert from 'assert';
 
 // ¦mjsUsageDemo¦+
-import envcfgImportDeep from '../';
+import envcfgImportDeep from '..';
 // ¦mjsUsageDemo¦- importPkgName
 
 // ¦mjsUsageDemo¦+
