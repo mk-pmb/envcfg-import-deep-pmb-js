@@ -7,10 +7,8 @@ function envcfgImportDeep(cfg, opt) {
   if (!cfg) { return cfg; }
   var copy = (opt.inplace !== true), sep = (opt.sep || '_'),
     env = (opt.env || process.env), envPrefix = opt.prefix;
-  if (opt.ifPrefixProp) {
-    envPrefix = cfg[opt.ifPrefixProp];
-    if (!envPrefix) { return cfg; }
-  }
+  if (opt.ifPrefixProp) { envPrefix = (cfg[opt.ifPrefixProp] || false); }
+  if (envPrefix === false) { return cfg; }
   function scan(obj, pfx) {
     var modified = (copy ? null : obj);
     Object.keys(obj).forEach(function (key) {

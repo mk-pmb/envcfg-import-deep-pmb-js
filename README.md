@@ -19,16 +19,25 @@ This module exports one function:
 
 `baseCfg` is your original config object.
 Returns `baseCfg` if there were no modifications to be made,
-or a modified copy. Tries to keep the copy as shallow as possible
+or the `inplace` option is used;
+otherwise, returns a modified copy.
+Tries to keep the copy as shallow as possible
 while still not modifying original objects.
 
 `opts` is an optional options object that supports these keys:
 
 * `env`: Which dictionary to use as environment. Default: `process.env`
-* `prefix`: Prefix for env vars. Default: empty string
+* `prefix`: Prefix for env vars. Should be a string.
+  Can also be `false` to abort early and do nothing except returning
+  your unmodified `baseCfg`.
+  Default: empty string
 * `sep`: What string to append to the `prefix` in addition to the
   property name when diving. Default: `'_'`
 * `inplace`: If set to `true`, don't copy anything, just modify it inplace.
+* `ifPrefixProp`: If set to a true-y value,
+  set the `prefix` option to this value, otherwise to `false`.
+  This is an easy way to offer a CLI option that decides whether and which
+  environment variable options to use to override the CLI options.
 
 
 
